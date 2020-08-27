@@ -4,7 +4,7 @@ from classes import *
 
 
 def menu():
-    option = int(input("Digite 1 para cadastrar usuário, 2 para cadastrar produto, 3 para cadastrar compra, 4 para cadastrar produto da compra e 0 para sair "))
+    option = int(input("Digite: \n 1 - Cadastrar usuário,\n 2 - Cadastrar produto,\n 3 - Cadastrar compra,\n 4 - Cadastrar produto da compra,\n 5 - Mostrar a média de idade\n 0  - Sair "))
 
     if (option == 1):
         cadastroPessoa()
@@ -14,6 +14,8 @@ def menu():
         cadastroCompra()
     elif (option == 4):
         cadastroProdutoCompra()
+    elif (option == 5):
+        mostrarMediaIdade()
     elif (option == 10):
         listaRegistros()
     elif (option == 0):
@@ -60,15 +62,22 @@ def cadastroProdutoCompra():
     produtocompra.cadstrar(id_compra,id_produto,quantidade)
     menu()
 
+
+def mostrarMediaIdade():
+    pessoa = Pessoa()
+    print("Média de idade:", pessoa.getMediaIdade())
+
 def listaRegistros():
     pessoa = Pessoa()
     produto = Produto()
     compra = Compra()
     produtocompra = ProdutoCompra()
 
-    pessoa.listar()
-    produto.listar()
-    compra.listar()
-    produtocompra.listar()
+    print(pessoa.listar())
+    print(produto.listar())
+    print(compra.listar())
+    print(produtocompra.listar())
+
+    
 
 menu()
