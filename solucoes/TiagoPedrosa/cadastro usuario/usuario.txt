@@ -1,6 +1,0 @@
-id_usuario,nome,idade,sexo
-1,Tiago,22,M
-2,Maria,21,F
-3,Alves,19,M
-4,Joao,25,M
-5,Lucas,25,M
